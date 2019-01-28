@@ -12,6 +12,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,7 @@ import { SurveyComponent } from './survey/survey.component';
 import { AddSurveyComponent } from './add-survey/add-survey.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { SurveyTableComponent } from './survey-table/survey-table.component';
+import { CreateSurveyComponent } from './create-survey/create-survey.component';
 
 
 
@@ -37,7 +40,8 @@ import { SurveyTableComponent } from './survey-table/survey-table.component';
     SurveyComponent,
     AddSurveyComponent,
     AddQuestionComponent,
-    SurveyTableComponent
+    SurveyTableComponent,
+    CreateSurveyComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,8 @@ import { SurveyTableComponent } from './survey-table/survey-table.component';
     MatToolbarModule,
     MatIconModule,
     MatStepperModule,
+    MatSelectModule,
+    
   ],
   providers: [ ],
   bootstrap: [AppComponent]

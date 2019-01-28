@@ -1,0 +1,30 @@
+<form [formGroup]="myForm">
+
+    Value: {{ myForm.value | json }}
+
+    <hr>
+
+    <mat-form-field class="full">
+        <input matInput placeholder="enter survey name" formControlName="surveyName">
+    </mat-form-field>
+
+    <div formArrayName="questions">
+
+        <div *ngFor="let question of questionForms.controls; let i=index" [formGroupName]="i">
+
+
+            <mat-form-field class="xs">
+                <input matInput placeholder="enter question text" formControlName="questionText">
+            </mat-form-field>
+
+            <button mat-raised-button color="warn" (click)="deleteQuestion(i)">Delete</button>
+
+        </div>
+
+    </div>
+
+    <button mat-raised-button color="info" (click)="addQuestion()" [disabled] = "myForm.invalid">Add Question</button>
+
+
+
+</form>
