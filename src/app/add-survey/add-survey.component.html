@@ -1,0 +1,43 @@
+
+<div class="row" >
+
+<!--     <div class="mx-auto">
+          <mat-slide-toggle 
+          [checked]="preview" (change)= "ShowPreview()">
+              Preview Survey?
+        </mat-slide-toggle> 
+    </div> -->
+  
+  </div>
+
+<div class="row" *ngIf="preview === false" >
+
+
+    <div class="col-lg-6">
+        <mat-card class="survey-card">
+        <form [formGroup]="myForm">
+            <mat-form-field class="example-full-width" >
+              <input matInput formControlName = "surveyName" placeholder="Enter Survey Name" >
+            </mat-form-field>
+        </form>
+        <button mat-raised-button  (click)="AddQuestion()"  > Add Question</button>
+      </mat-card>
+
+      <div *ngIf="addQuestion">
+        <add-question></add-question>
+        </div>
+    
+
+    </div>
+
+  
+    <div class="col-lg-6">
+
+          <mat-card class="survey-card">
+            {{ myForm.value | json }}
+        </mat-card>
+    </div>
+  
+</div>
+
+

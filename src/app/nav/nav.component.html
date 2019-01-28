@@ -1,0 +1,12 @@
+  <mat-toolbar class="nav">
+      <mat-toolbar-row>
+        <a class="logo" routerLink="/">{{appTitle}}</a>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="surveyOptions">Surveys</button>
+        <mat-menu #surveyOptions="matMenu">
+          <button mat-menu-item><a routerLink="/survey">View</a></button>
+          <button mat-menu-item><a routerLink="/create">Create</a></button>
+        </mat-menu>
+        <button mat-button>Log Out</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
